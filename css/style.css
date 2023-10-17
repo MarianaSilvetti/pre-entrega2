@@ -12,48 +12,75 @@
   --secondary-text-color: #ffffffc9;
 }
 body {
-  align-items: center;
+  margin: 0;
+  padding: 0;
   font-family: 'Roboto', sans-serif;
-  background-color: var(--main-bg-color);
   color: var(--main-text-color);
+  background-color: var(--main-bg-color);
+  background-attachment: fixed;
+}
+header {
+  position: relative;
+  max-width: 1900px;
+  /* margin: 10px auto; */
+  padding: 10px;
+  background: var(--secondary-bg-color);
+}
+.mensaje-header {
+  text-align: center;
+  padding: 10px;
+  margin: 5px;
+  color: var(--main-text-color);
+}
+#tituloGrandesSoluciones {
+  color: var(--main-text-color);
+  height: 60px;
+  font-size: 36px;
+  line-height: 60px;
+  padding: 0 20px;
+  text-align: center;
+  box-sizing: border-box;
+  float: left;
+  font-weight: 700;
+  text-decoration: none;
+}
+nav {
+  float: right;
+}
+.clearfix {
+  clear: both;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+nav ul li {
+list-style: none;
+}
+nav ul li a {
+  display: block;
+  margin: 10px 0;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: var(--main-text-color);
+}
+nav ul li a.active,
+nav ul li a:hover {
+  background: var(--main-button-color);
+  color: var(--main-text-color);
+  transition: 0.5s;
+}
+@media (max-width: 1200px) {
+header {
+  margin: auto;
+}
 }
 main {
   margin: auto 5px;
 }
-.mensaje-header {
-  text-align: center;
-}
-header {
-  background-color: var(--secondary-bg-color);
-  padding: 15px 0px;
-  font-size: large;
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  display: flex;
-  flex-direction: row;
-}
-nav li {
-  align-items: center;
-  flex: content;
-}
-nav li a {
-  display: block;
-  color: var(--main-text-color);
-  text-align: center;
-  padding: 0px 12px;
-  text-decoration: none;
-}
-#tituloGrandesSoluciones {
-  margin: 0px 12px;
-}
+ 
+
 .que-es {
   background-color: var(--secondary-bg-color);
   text-align: center;
