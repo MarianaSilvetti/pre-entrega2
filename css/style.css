@@ -26,6 +26,17 @@ header {
   padding: 10px;
   background: var(--secondary-bg-color);
 }
+.titulo-otros-proyectos {
+  color: var(--main-text-color);
+  height: 50px;
+  font-size: 36px;
+  line-height: 60px;
+  padding: 0 20px;
+  text-align: center;
+  box-sizing: border-box;
+  font-weight: 600;
+  text-decoration: none;
+}
 .mensaje-header {
   text-align: center;
   padding: 10px;
