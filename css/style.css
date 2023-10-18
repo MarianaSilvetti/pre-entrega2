@@ -142,6 +142,7 @@ li a:hover {
   } 
   #check:checked ~ ul {
     left: 0;
+    z-index: 1000;
   }
 }
 main {
