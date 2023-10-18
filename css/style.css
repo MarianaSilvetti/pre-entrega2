@@ -1,11 +1,14 @@
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
   box-sizing: border-box;
 }
 :root {
   --main-bg-color: #2b193d;
   --secondary-bg-color: #2c365e;
+  --tertiary-bg-color: #272f4f;
   --main-button-color: #a675a1;
   --secondary-button-color: #b80ea7;
   --main-text-color: #ffffff;
@@ -43,7 +46,7 @@ header {
   margin: 5px;
   color: var(--main-text-color);
 }
-#tituloGrandesSoluciones {
+#logoGrandesSoluciones {
   color: var(--main-text-color);
   height: 60px;
   font-size: 36px;
@@ -55,43 +58,95 @@ header {
   font-weight: 700;
   text-decoration: none;
 }
+/* navbar */
 nav {
-  float: right;
+  background: var(--secondary-bg-color);
+  height: 80px;
+  width: 100%;
 }
-.clearfix {
-  clear: both;
+.enlace {
+  position: absolute;
+  padding: 20px 50px;
+}
+.logo {
+  height: 40px;
 }
 nav ul {
-  margin: 0;
-  padding: 0;
-  display: flex;
+  float: right;
+  margin-right: 20px;
 }
 nav ul li {
-list-style: none;
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
 }
 nav ul li a {
-  display: block;
-  margin: 10px 0;
-  padding: 10px 20px;
-  text-decoration: none;
   color: var(--main-text-color);
+  font-size: 18px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  /* text-transform: uppercase; */
 }
-nav ul li a.active,
-nav ul li a:hover {
+li a.active,
+li a:hover {
   background: var(--main-button-color);
-  color: var(--main-text-color);
   transition: 0.5s;
 }
-@media (max-width: 1200px) {
-header {
-  margin: auto;
+.checkbtn {
+  font-size: 30px;
+  color: var(--main-text-color);
+  float: right;
 }
+.checkbtn i {
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
+}
+@media (max-width:952px) {
+  .enlace {
+    padding-left: 20px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+@media (max-width:858px) {
+  .checkbtn, .checkbtn i {
+    display: block;
+  }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: var(--tertiary-bg-color);
+    top: 145px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li  {
+    font-size: 20px;  
+  }
+  li a:hover, li a.avtive {
+    background: none;
+    color: #a675a1;
+  } 
+  #check:checked ~ ul {
+    left: 0;
+  }
 }
 main {
   margin: auto 5px;
 }
- 
-
 .que-es {
   background-color: var(--secondary-bg-color);
   text-align: center;
@@ -117,7 +172,7 @@ main {
   cursor: default;
   transition: all 400ms ease;
 }
-.card:hover{
+.card:hover {
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
   /* transform: translateY(-3%); */
 }
@@ -125,12 +180,10 @@ main {
   width: 100%;
   height: auto;
   object-fit: fill;
-
 }
 .card .contenido {
   padding: 15px;
   text-align: center;
-
 }
 .card .contenido p {
   line-height: 1.5;
