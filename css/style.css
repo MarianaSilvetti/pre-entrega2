@@ -204,6 +204,9 @@ main {
   background: var(--secondary-button-color);
   color: var(--main-text-color);
 }
+.row {
+  margin-right: 0;
+}
 .img {
   width: 190px;
   height: 400px;
